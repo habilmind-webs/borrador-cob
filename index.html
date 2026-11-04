@@ -16,8 +16,10 @@
   <meta property="og:url" content="https://borrador-cob.2-31-95-201.sslip.io/" />
   <meta name="twitter:card" content="summary" />
   <meta name="theme-color" content="#fafaf5" />
-  <!-- Favicon: /favicon.ico genérico del ecosistema (el mismo de socioemociograma, BAP y CAI); favicon propio del COB pendiente -->
-  <link rel="icon" href="/favicon.ico?v=20261104" sizes="any" />
+  <!-- Favicon propio del COB: laberinto del logo oficial (PNG de Rosario vía DC, 04/11), cuadrado y transparente; ?v= para saltarse la caché del genérico -->
+  <link rel="icon" href="/favicon.ico?v=20261104-cob" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/cob-favicon-32.png?v=20261104-cob" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261104-cob" />
   <script>/* Staging (Caddy spa) sirve la home en /que-es y /que-es/: se pasa a /que-es/index.html (la subpágina limpia luego la URL) */(function(){var r=["que-es", "aplicacion", "indicadores", "informes", "videos", "preguntas-frecuentes", "infografia", "tour-guiado"];var p=location.pathname.replace(/^\/|\/$/g,"");if(r.indexOf(p)>-1)location.replace("/"+p+"/index.html"+location.search+location.hash)})();</script>
   <!-- CHAT DE OFELIA (obligatorio, no quitar): mismo snippet que socioemociograma, BAP y CAI, en el head -->
   <script src="https://go.habilmind.net/webchat/widget.js" async></script>
@@ -114,8 +116,8 @@
 
   <header class="cab">
     <div class="wrap cab-in">
-      <!-- Logo oficial del COB: PENDIENTE (Rosario). Mientras, sigla en texto. -->
-      <a class="marca marca-cob" href="/" aria-label="COB, Cuestionario de Orientación al Bachillerato, inicio" data-pendiente="logo-cob"><span class="marca-txt"><span class="marca-sigla">COB</span><span class="marca-nom">Cuestionario de Orientación al Bachillerato</span></span></a>
+      <!-- Logo oficial del COB (PNG de Rosario, 04/11) -->
+      <a class="marca marca-cob" href="/" aria-label="COB, Cuestionario de Orientación al Bachillerato, inicio"><img src="/img/logo-cob.webp" width="941" height="200" alt="COB, cuestionario de orientación al bachillerato" fetchpriority="high" /></a>
       <button class="cab-menu" type="button" aria-expanded="false" aria-controls="cab-nav" aria-label="Menú"><span class="cab-menu-ico" aria-hidden="true"><span></span><span></span><span></span></span></button>
       <nav class="cab-nav" id="cab-nav" aria-label="Principal">
         <a href="/que-es/">Qué es</a><a href="/aplicacion/">Aplicación</a><a href="/indicadores/">Indicadores</a><a href="/informes/">Informes</a>
@@ -142,6 +144,7 @@
               <span class="insignia insignia-icce"><span>Desarrollado por</span><img class="logo-icce" src="/img/logo-icce.svg" width="300" height="300" alt="Logo del ICCE" /><span class="insignia-nom">Instituto Calasanz de Ciencias de la Educación (ICCE)</span></span>
               <a class="insignia insignia-hm" href="https://www.habilmind.com" target="_blank" rel="noopener"><span>Y la tecnología de</span><img src="/img/logo-habilmind.webp" width="149" height="64" alt="Habilmind" /><span class="flecha-caja" aria-hidden="true"><span class="flecha">→</span></span></a>
             </div>
+            <img class="hero-logo" src="/img/logo-cob.webp" width="941" height="200" alt="COB, cuestionario de orientación al bachillerato" />
             <div class="ctas">
               <a class="btn btn-pri btn-lg" href="https://precios.habilmind.com/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Precios <span aria-hidden="true">→</span></a>
               <a class="btn btn-sec btn-lg" href="https://go.habilmind.net/webchat/cta/cob?boton=hero&amp;site=borrador-cob" target="_blank" rel="noopener" data-ofelia-cta="cob" data-ofelia-boton="hero"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>Reunión o llamada</a>
@@ -513,7 +516,7 @@
   <footer class="pie">
     <div class="wrap pie-wrap">
       <div class="pie-cab">
-        <a class="pie-marca pie-marca-cob" href="/" aria-label="COB, inicio" data-pendiente="logo-cob"><span class="marca-sigla">COB</span></a>
+        <a class="pie-marca pie-marca-cob" href="/" aria-label="COB, inicio"><img class="pie-logo-cob" src="/img/logo-cob-pie.webp" width="941" height="200" alt="COB, cuestionario de orientación al bachillerato" loading="lazy" /></a>
         <p class="pie-titulo">Cuestionario de Orientación al Bachillerato (COB)</p>
         <p class="pie-desc">Ayuda a tus alumnos a reconocer qué les interesa, explorar sus opciones y preparar su siguiente paso después de la ESO. Una herramienta de la <a href="https://borrador-bap.2-31-95-201.sslip.io/">Batería de Ampliación Psicopedagógica (BAP)</a>.</p>
       </div>
