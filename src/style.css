@@ -616,21 +616,7 @@ html.hmc-abierto{overflow:hidden}
 @media (max-width:860px){.marca-cob img{height:38px}}
 .pie-marca-cob{display:inline-block;text-decoration:none}
 .pie-logo-cob{display:block;height:44px;width:auto;max-width:100%}
-/* Logo del COB en el hero encima de los CTA, como el CAI (280 px escritorio, 250 tableta, 220 móvil) */
-/* Ficha técnica con 4 datos (sin Idiomas, que Rosario no ha dado): móvil Aplicación+Edad en 2 col; escritorio 2 filas de 2 */
-.ft-specs.ft-cob{grid-template-areas:"apl idi" "dur dur" "edad edad" "amb amb"}
-.ft-specs .ft-ambito{grid-area:amb}
-@media (min-width:768px){.ft-specs.ft-cob{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-areas:"apl apl dur dur idi idi" "edad edad edad amb amb amb"}}
-/* Indicadores: áreas de cada agrupación como chips (mismo estilo que .ambitos del CAI) */
-.cob-areas{margin-top:.25rem}
-/* Qué aporta: lead bajo el h2 */
-.aporta-lead{margin:1rem 0 0;color:var(--mut)}
-/* Informes: bloque «Informe individual» junto al hueco de imagen */
-.inf-bloque h3{margin:0 0 .75rem}.inf-intro{margin:0;color:var(--mut)}
-.inf-tarjetas{margin-bottom:0}
-/* Cierre con dos CTA (Consultar precios + Reunión o llamada), como pide el brief */
-.cierre-cta{flex-wrap:wrap;gap:1rem}
-.btn-cierre-sec{background:transparent;color:#000;border:1px solid #000;animation:none}
-.btn-cierre-sec:hover{background:rgba(0,0,0,.05)}
 /* Enlaces pendientes (href="#") */
 a[href="#"][data-pendiente]{cursor:not-allowed}
+/* Huecos de copy pendiente (data-pendiente) en tarjetas: se ven atenuados */
+.tarjeta[data-pendiente]{opacity:.55;border-style:dashed}
