@@ -616,6 +616,8 @@ html.hmc-abierto{overflow:hidden}
 @media (max-width:860px){.marca-cob img{height:38px}}
 .pie-marca-cob{display:inline-block;text-decoration:none}
 .pie-logo-cob{display:block;height:44px;width:auto;max-width:100%}
+/* 04/11 · Rosario vía DC: logo COB del pie en blanco, como el logo CAI del pie (borrador-cai) */
+.pie-logo-cob{filter:brightness(0) invert(1)}
 /* Enlaces pendientes (href="#") */
 a[href="#"][data-pendiente]{cursor:not-allowed}
 /* Huecos de copy pendiente (data-pendiente) en tarjetas: se ven atenuados */
