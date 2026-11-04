@@ -7,7 +7,7 @@ Borrador pedido por Rosario (vía Doña Clotilde) el 04/11/2026. **Solo staging*
 - Nav = socioemociograma sin Fundamentación (como CAI): Qué es, Aplicación, Indicadores, Informes, Más (Videos, Preguntas frecuentes, Infografía, Tour guiado), Soporte, Reunión o llamada (CTA Ofelia `cob`), Precios.
 - Multipágina con Vite; la home redirige `/slug` y `/slug/` a `/slug/index.html` (el staging usa `import spa`) y la subpágina limpia la URL. Con dominio real, mejor `spa_prerender`.
 
-- Logo oficial del COB (PNG de Rosario, 04/11) en cabecera, hero y pie (`public/img/logo-cob.webp`, variante del pie `logo-cob-pie.webp` con el texto en claro y el laberinto cyan intacto); favicon propio del laberinto (`public/favicon.ico`, `apple-touch-icon.png`, `img/fav/cob-favicon-32.png`). Assets: `/workspace/cob/logo/gen_assets.py`.
+- Logo oficial del COB (PNG de Rosario, 04/11) en cabecera, hero y pie (`public/img/logo-cob.webp`, variante del pie `logo-cob-pie.webp` con el texto en claro y el laberinto cyan intacto); favicon propio del laberinto (solo `public/favicon.ico` 16/32/48/256, como socio y CAI). Assets: `/workspace/cob/logo/gen_assets.py`.
 
 ## Pendientes (huecos con `data-pendiente`)
 - Fotos: hero 4:3, #necesidad, #que-es, ejemplo de informe 16:9, fotos de los 2 autores (iniciales JF/JP).
