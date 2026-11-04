@@ -621,9 +621,9 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:640px){.hero-logo{width:min(100%,250px);margin-bottom:1.75rem}}
 @media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}}
 /* Ficha técnica con 4 datos (sin Idiomas, que Rosario no ha dado): móvil Aplicación+Edad en 2 col; escritorio 2 filas de 2 */
-.ft-specs.ft-cob{grid-template-areas:"apl edad" "dur dur" "amb amb"}
+.ft-specs.ft-cob{grid-template-areas:"apl idi" "dur dur" "edad edad" "amb amb"}
 .ft-specs .ft-ambito{grid-area:amb}
-@media (min-width:768px){.ft-specs.ft-cob{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"apl dur" "edad amb"}}
+@media (min-width:768px){.ft-specs.ft-cob{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-areas:"apl apl dur dur idi idi" "edad edad edad amb amb amb"}}
 /* Indicadores: áreas de cada agrupación como chips (mismo estilo que .ambitos del CAI) */
 .cob-areas{margin-top:.25rem}
 /* Qué aporta: lead bajo el h2 */
