@@ -620,3 +620,55 @@ html.hmc-abierto{overflow:hidden}
 a[href="#"][data-pendiente]{cursor:not-allowed}
 /* Huecos de copy pendiente (data-pendiente) en tarjetas: se ven atenuados */
 .tarjeta[data-pendiente]{opacity:.55;border-style:dashed}
+
+/* COB #informes: carrusel copiado de borrador-cai @3c88d52 (Rosario vía DC/Ofelia, 04/11/2026) */
+/* #informes: carrusel con los 3 ejemplos de informe del CAI (04/11/2026, Rosario vía DC): marco 16:9, imagen entera sobre blanco, desliza con scroll-snap, flechas y puntos */
+/* #informes: carrusel con el aspecto del Carousel de socioemociograma.com (en vivo) + ampliación */
+.inf-carrusel{min-width:0;width:100%;max-width:28rem;margin:0 auto;position:relative}
+@media (min-width:1024px){.inf-carrusel{margin:0}}
+.inf-cap{text-align:center;margin-bottom:1rem;min-height:3.5rem;padding-bottom:.5rem}
+.inf-badge{display:inline-block;padding:.375rem 1rem;background:rgba(32,41,60,.1);color:var(--pri);font-size:.875rem;line-height:1.25rem;font-weight:500;margin-bottom:.25rem;border-radius:9999px}
+.inf-desc{margin:0;color:var(--mut);font-size:.875rem;line-height:1.6}
+.inf-marco{display:grid;grid-template-columns:2rem minmax(0,1fr) 2rem;align-items:center;column-gap:.75rem}
+.inf-marco>.inf-pista{grid-column:2;grid-row:1} /* flechas fuera de la imagen, como socioemociograma (Rosario vía DC, 04/11) */
+.inf-pista{list-style:none;margin:0;padding:0;display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;background:none;border:0;box-shadow:none}
+.inf-pista::-webkit-scrollbar{display:none}.inf-pista:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.inf-slide{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;padding:0;display:block;aspect-ratio:auto}
+.inf-slide-a{position:relative;display:block;border:1px solid rgba(223,222,211,.5);overflow:hidden;cursor:zoom-in;background:#fff}
+.inf-slide-a:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.inf-slide img{display:block;width:100%;height:auto;object-fit:cover}
+.inf-lupa{position:absolute;right:.5rem;bottom:.5rem;display:grid;place-items:center;padding:.375rem;background:rgba(0,0,0,.5);color:#fff;line-height:0}
+.inf-btn{position:static;display:inline-grid;place-items:center;width:2rem;height:2rem;padding:0;border:1px solid var(--borde);background:transparent;color:var(--fg);cursor:pointer;transition:background-color .2s;z-index:2}
+.inf-btn:hover{background:var(--muted)}.inf-btn:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.inf-prev{grid-column:1;grid-row:1}.inf-next{grid-column:3;grid-row:1}
+@media (min-width:1024px){.inf-carrusel{max-width:33.5rem}}
+.inf-pista-hint{display:flex;align-items:center;justify-content:center;gap:.25rem;margin:.5rem 0 0;color:var(--mut);font-size:.75rem;line-height:1.6}
+.inf-hint-raton{display:none}
+@media (hover:hover) and (pointer:fine){.inf-hint-raton{display:inline}.inf-hint-tactil{display:none}}
+/* lightbox (ImageLightbox de socioemociograma) */
+.inf-lb{position:fixed;inset:0;z-index:2147483002;display:flex;flex-direction:column;opacity:0;transition:opacity .2s}
+.inf-lb[hidden]{display:none}.inf-lb.on{opacity:1}
+.inf-lb-fondo{position:absolute;inset:0;background:rgba(0,0,0,.9);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.inf-lb-top{position:relative;z-index:1;display:flex;justify-content:flex-end;padding:1rem}
+.inf-lb button{font:inherit;border:0;cursor:pointer;color:#fff;display:inline-grid;place-items:center;padding:0;transition:background-color .2s}
+.inf-lb button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.inf-lb-x{width:2.5rem;height:2.5rem;background:rgba(255,255,255,.15)}.inf-lb-x:hover{background:rgba(255,255,255,.25)}
+.inf-lb-area{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:0 1rem .5rem;min-height:0}
+.inf-lb-cap{text-align:center;margin-bottom:.25rem}
+.inf-lb-badge{display:inline-block;padding:.25rem .75rem;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-size:.75rem;line-height:1rem;font-weight:500;margin-bottom:.25rem;border-radius:9999px}
+.inf-lb-desc{margin:0 auto;max-width:32rem;color:rgba(255,255,255,.7);font-size:.75rem;line-height:1.5}
+@media (min-width:640px){.inf-lb-desc{font-size:.875rem}}
+.inf-lb-escena{position:relative;display:flex;align-items:center;justify-content:center;width:100%;overflow:hidden;min-height:0}
+.inf-lb-lienzo{display:flex;align-items:center;justify-content:center;max-width:100%;max-height:100%;touch-action:none;overflow:visible}
+.inf-lb-img{display:block;max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-select:none;cursor:zoom-in;transform-origin:center center;will-change:transform;background:#fff}
+.inf-lb-lienzo.zoom .inf-lb-img{cursor:grab}
+.inf-lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:3rem;height:3rem;background:rgba(255,255,255,.1);z-index:2;display:none!important}
+.inf-lb-nav:hover{background:rgba(255,255,255,.2)}.inf-lb-nav.inf-lb-prev{left:1rem}.inf-lb-nav.inf-lb-next{right:1rem}
+.inf-lb-movil{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:.75rem 0}
+.inf-lb-nav2{width:2.5rem;height:2.5rem;background:rgba(255,255,255,.15)}.inf-lb-nav2:hover{background:rgba(255,255,255,.25)}
+.inf-lb-cont{color:rgba(255,255,255,.6);font-size:.875rem}
+.inf-lb-puntos{position:relative;z-index:1;display:none;align-items:center;justify-content:center;gap:.5rem;padding-bottom:1.5rem}
+.inf-lb .inf-lb-punto{width:.5rem;height:.5rem;border-radius:9999px;background:rgba(255,255,255,.4);transition:all .2s}
+.inf-lb .inf-lb-punto:hover{background:rgba(255,255,255,.6)}.inf-lb .inf-lb-punto[aria-current="true"]{width:1.5rem;background:#fff}
+@media (min-width:768px){.inf-lb-escena{flex:1}.inf-lb-nav{display:inline-grid!important}.inf-lb-movil{display:none}.inf-lb-puntos{display:flex}.inf-lb-escena{padding:0 5rem}}
+@media (prefers-reduced-motion:reduce){.inf-lb,.inf-lb-img{transition:none!important}}
