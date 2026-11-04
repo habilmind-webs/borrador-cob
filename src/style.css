@@ -617,9 +617,6 @@ html.hmc-abierto{overflow:hidden}
 .pie-marca-cob{display:inline-block;text-decoration:none}
 .pie-logo-cob{display:block;height:44px;width:auto;max-width:100%}
 /* Logo del COB en el hero encima de los CTA, como el CAI (280 px escritorio, 250 tableta, 220 móvil) */
-.hero-logo{display:block;height:auto;width:min(80%,220px);margin:0 auto 1.5rem}
-@media (min-width:640px){.hero-logo{width:min(100%,250px);margin-bottom:1.75rem}}
-@media (min-width:1024px){.hero-logo{margin-left:0;width:min(100%,280px)}}
 /* Ficha técnica con 4 datos (sin Idiomas, que Rosario no ha dado): móvil Aplicación+Edad en 2 col; escritorio 2 filas de 2 */
 .ft-specs.ft-cob{grid-template-areas:"apl idi" "dur dur" "edad edad" "amb amb"}
 .ft-specs .ft-ambito{grid-area:amb}
