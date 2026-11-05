@@ -11,7 +11,6 @@ export default defineConfig({
     'informes': resolve(__dirname, 'informes/index.html'),
     'videos': resolve(__dirname, 'videos/index.html'),
     'preguntas-frecuentes': resolve(__dirname, 'preguntas-frecuentes/index.html'),
-    'infografia': resolve(__dirname, 'infografia/index.html'),
     'tour-guiado': resolve(__dirname, 'tour-guiado/index.html')
   } } }
 });
