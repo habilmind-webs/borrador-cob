@@ -674,6 +674,8 @@ a[href="#"][data-pendiente]{cursor:not-allowed}
 .inf-lb .inf-lb-punto:hover{background:rgba(255,255,255,.6)}.inf-lb .inf-lb-punto[aria-current="true"]{width:1.5rem;background:#fff}
 @media (min-width:768px){.inf-lb-escena{flex:1}.inf-lb-nav{display:inline-grid!important}.inf-lb-movil{display:none}.inf-lb-puntos{display:flex}.inf-lb-escena{padding:0 5rem}}
 @media (prefers-reduced-motion:reduce){.inf-lb,.inf-lb-img{transition:none!important}}
+/* COB: carrusel con una sola captura (Rosario vía DC, 09/11): sin flechas ni puntos, columnas de la rejilla intactas (CLS 0) */
+.inf-una .inf-btn,.inf-una .inf-lb-nav,.inf-una .inf-lb-movil,.inf-una .inf-lb-puntos{display:none!important}
 
 /* COB: pill «Solo disponible en España» con bandera (pedido Rosario vía DC/Ofelia, hilo 49e23147) */
 .pill-espana{display:flex;width:max-content;max-width:100%;align-items:center;gap:.45em;margin:.6em auto 0;padding:.35em .85em;border:1px solid #f1bf00;border-radius:999px;background:#fff8db;color:#7a1f12;font-weight:700;letter-spacing:.08em;white-space:nowrap;vertical-align:middle;box-shadow:0 1px 2px rgba(0,0,0,.06)}
