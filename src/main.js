@@ -70,7 +70,3 @@ initConsentScripts();
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && caja.classList.contains('abierto')) { set(false); btn.focus(); } });
 })();
 import './expertos.js';
-
-// Idiomas de la ficha técnica desde la hoja pública de idiomas (como socioemociograma.com); fallback = HTML estático.
-import { initIdiomasHoja } from './idiomas-hoja.js';
-initIdiomasHoja();
